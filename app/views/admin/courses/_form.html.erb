@@ -1,0 +1,49 @@
+<%= javascript_include_tag :fckeditor %>
+
+<%= error_messages_for :course %>
+<%form_for [:admin,@course] do |f|%>
+Язык <b><%=lang_id(@lang)%></b>
+
+<p>
+<%= f.label 'Заголовок' %><br />
+<%=f.text_field :name%>
+</p>
+
+<p>
+    <%=ident_choice(@course)%>
+</p>
+
+<p>
+  <%= f.label 'Относится к стране:' %><br />
+  <%= f.select :country_id, Country.find(:all).map{|it| [it.name,it.id]}, {:include_blank => true} %>
+</p>
+
+<p>
+<%= f.label 'Описание' %><br />
+<%= fckeditor_textarea(:course, :description, :toolbarSet => 'Simple', :width => '98%', :height => '300px') %>
+</p>
+
+  <p>
+
+    <%= f.label 'относится к программе:' %><br />
+    <ul style="list-style:none" id="programs">
+    <%course_programs=@course.programs.collect(&:id)%>
+    <% for root in Program.roots %>
+      <%for it in root.self_and_descendants %>
+          <li>
+          <%checked = !course_programs.find{|i| i==it.id}.nil?%>
+          <%= check_box_tag("course[program_ids][]", it.id, checked)  %>
+          <%= '--' * it.level %><%=it.name -%>
+          </li>
+      <%end%>
+      <li><p></p></li>
+    <% end %>
+
+    </ul>
+  </p>
+
+<p>
+<%=f.submit 'Сохранить изменения' %>
+</p>
+<%end%>
+

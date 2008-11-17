@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>StudyLine.ru</title>
+<link rel="stylesheet" type="text/css"  href="/stylesheets/style.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/superfish.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/superfish-vertical.css" />
+</head>
+
+  <script type="text/javascript" src="/javascripts/jquery-1.2.6.pack.js"></script>
+  <script type="text/javascript" language="JavaScript">
+$(document).ready(function() {
+	$("#header_left_rollover a").hover(
+		function(){$(this).fadeTo(300, 0.0); },
+		function(){$(this).fadeTo("slow", 0.9); }
+		);
+});
+
+  </script>
+
+  <script type="text/javascript" src="/javascripts/hoverIntent.js"></script>
+  <script type="text/javascript" src="/javascripts/superfish.js"></script>
+  <script type="text/javascript" src="/javascripts/supersubs.js"></script>
+
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+        $("ul.sf-menu").supersubs({
+            minWidth:    12,   // minimum width of sub-menus in em units
+            maxWidth:    27,   // maximum width of sub-menus in em units
+            extraWidth:  1     // extra width can ensure lines don't sometimes turn over
+
+			                   // due to slight rounding differences and font-family
+        }).superfish();  // call supersubs first, then superfish, so that subs are
+                         // not display:none when measuring. Call before initialising
+                         // containing tabs for same reason.
+    });
+
+</script>
+
+
+<body>
+
+
+
+
+
+
+<div id="content">
+  <div  id="header">
+    <div id="header_left">
+      <div><img src="/images/logo.jpg" width="212" height="130"></div>
+      <%= menu_top %>
+    </div>
+    <div id="header_right">
+      <div id="header_right1"><img src="/images/map.jpg" usemap="#Map" width="253" height="313" border="0">
+        <map name="Map">
+          <area shape="poly" coords="40,63,71,33,93,10,120,7,149,30,164,43,93,117,80,127,58,124,21,85" href="#">
+          <area shape="poly" coords="10,226,25,244,64,283,85,285,107,270,135,240,51,160,18,193,10,207" href="#">
+          <area shape="poly" coords="157,205,198,165,244,115,257,104,256,75,214,27,189,26,155,54,77,132" href="#">
+        </map>
+      </div><div id="header_right2"><img src="/images/study.jpg" width="316" height="313"></div>
+    </div>
+  </div>
+  <div id="main">
+    <div id="main_top<%=other_class%>"></div>
+    <div id="main_center<%=other_class%>">
+      <div id="text">
+
+        <%= menu_left %>
+
+        <div id="cont">
+          <%= yield :layout %>
+        </div>
+      </div>
+    </div>
+    <div id="main_bottom<%=other_class%>"></div>
+  </div>
+  <div id="footer">
+    <div id="orange"></div>
+    <div><br><br><br>
+    <a href="#"><img src="/images/menu_bottom/home.gif" border="0" style="padding-left:200px; padding-right:20px;"></a>
+    <a href="#"><img src="/images/menu_bottom/about.gif" border="0" style="padding-left:20px; padding-right:20px;"></a>
+    <a href="#"><img src="/images/menu_bottom/service.gif" border="0" style="padding-left:20px; padding-right:20px;"></a>
+    <a href="#"><img src="/images/menu_bottom/otziv.gif" border="0" style="padding-left:20px; padding-right:20px;"></a>
+    <a href="#"><img src="/images/menu_bottom/contact.gif" border="0" style="padding-left:20px; padding-right:20px;"></a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

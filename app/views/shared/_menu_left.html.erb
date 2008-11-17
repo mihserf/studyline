@@ -1,0 +1,29 @@
+
+<div id="menu">
+        <% if admin? %>
+            <div id="column_header">Админ-меню</div>
+            <br />
+          <ul class="sf-menu sf-vertical" style="padding-left:10px !important; margin-left:10px !important">
+          <li><%= link_to "Статические страницы", admin_pages_path %></li>
+          <li><%= link_to "Программы", admin_programs_path %></li>
+          <li><%= link_to "Страны", admin_countries_path %></li>
+          <li><%= link_to "Курсы", admin_courses_path %></li>
+        </ul>
+        <% end %>
+
+
+        <div id="column_header">Рубрикатор</div>
+        <br />
+
+          <ul class="sf-menu sf-vertical" style="padding-left:10px !important; margin-left:10px !important">
+          <% for item in Program.roots %>
+            <li>
+                <%= link_to item.name, l_program_path(lang_id(@lang),item.permalink), {:class => "sf-with-ul"} %>
+                <%= sub_programs_menu(item){|i| render :partial=>"programs/program_menu_sub_item.html.erb", :locals =>{:it=>i} } unless item.leaf?%>
+            </li>
+          <% end %>
+          </ul>
+
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+        </div>

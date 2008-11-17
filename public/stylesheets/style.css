@@ -1,0 +1,308 @@
+@charset "windows-1251";
+BODY {
+		font-family: Tahoma;
+		font-size: 12px;
+		color: #818181;
+		background: #ffffff url(/images/bottom.jpg) no-repeat bottom;
+		text-align: left;
+		margin:0;
+		padding:0;
+		}
+img {border:0}
+a{color:#2198d0;}
+#content{
+		margin: 0 auto;
+		width:781px;}
+
+#header{height:313px;}
+
+#header_left{
+		position:relative;
+		float:left;
+		width:212px;}
+#header_left a{
+		width:212px;
+		height:30px;}
+#header_right{}
+#header_right1{float:left;}
+#header_right2{float:left}
+*html #main{margin-top:-2px;}
+#main_top_other{
+		background:url(/images/main_top_other.jpg) no-repeat;
+		width:781px;
+		height:30px;}
+#main_top{
+		background:url(/images/main_top.jpg) no-repeat;
+		width:781px;
+		height:30px;}
+#main_center_other{
+		background:url(/images/main_other.jpg) repeat-y;
+		width:781px;
+		height:100%;
+		float:left;}
+#main_center{
+		background:url(/images/main.jpg) repeat-y;
+		width:781px;
+		height:100%;
+		float:left;}
+#way{
+		size:12px;
+		color:#00ade3;}
+*html #way{
+margin-top:8px;}
+#goriz{
+		background:url(/images/goriz.gif) repeat-x;
+		height:1px;
+		width:550px;}
+#text{	
+		margin-top:-10px;
+		width:781px;
+		float:left;}
+#text{	
+
+		width:781px;
+		float:left;}
+	
+#text_other{
+		margin-top:-10px;
+		width:545px;
+		text-align:justify;}
+#html #text_other{ margin-top:0}
+#text_other UL{list-style-image: url(/images/treug.gif);}
+#text_other1{
+		margin-top:20px;
+		width:545px;
+		text-align:justify;}
+
+#text_other1 UL{list-style-image: url(/images/treug.gif);}
+*html #text{margin-top:0px;}
+#menu{
+		color:#FFFFFF;
+		width:190px;
+		margin-left:0px;
+		float:left;
+		text-align:left;}
+#cont{
+		width:565px;
+		margin-left:210px;}
+#cont1{
+		width:565px;
+		margin-left:210px;}
+#cont h1{
+		color:#f68a1a;
+		size:18px;
+}
+#cont h3{
+		color:#818181;
+		size:14px;
+}
+
+#news{
+		width:172px;
+		float:left;
+		text-align:left;
+}
+#news H1{
+		font-size:16px;
+		color:#00ade3;
+		margin-top:7px;
+		font-family:Arial, Helvetica, sans-serif;}
+#news A{
+		font:Tahoma 12px;
+		color:#00ade3;
+		text-decoration:none;}
+#news A:hover{
+		font:Tahoma 12px;
+		color:#00ade3;
+		text-decoration:none;}
+#news A:visited{
+		font:Tahoma 12px;
+		color:#00ade3;
+		text-decoration:none;}
+#conte{
+		width:350px;
+		margin-top: 5px;
+		margin-left:200px;}
+#conte H1{
+		font-size:16px;
+		color:#00ade3;
+		font-family:Arial, Helvetica, sans-serif;}
+#column_header{
+		font-size:24px;
+		color:#ffffff;
+		font-family:Arial, Helvetica, sans-serif;
+		margin-left:30px;}
+#green_top{
+		background:url(/images/green/top.jpg) no-repeat;
+		width:358px;
+		height:18px;
+		position:relative;}
+#green{	margin-left:-5px;}
+#green_book{
+		background:url(/images/green/book1.jpg) no-repeat;
+		width:108px;
+		height:71px;
+		position: relative;
+		float:left;}
+#green_text{
+		color:#f4f4f4;
+		padding-right:15px;
+		padding-left:15px;}
+#green_text_bottom{
+		color:#f4f4f4;
+		margin-top:90px;
+		margin-left:15px;
+		width:325px;}
+*html #green_text_bottom{
+		margin-top:0}
+#green_text_bottom UL{
+		list-style-image: url(/images/treug_green.gif);}
+#schools{
+		margin-left:196px;
+		width:250px;
+		float:left;}
+#map{
+		margin-left:118px;
+		float:left;}
+*html #map{
+		margin-left:25px;}
+#maps{
+		background:url(/images/maps.jpg) no-repeat;
+		width:201px;
+		height:236px;}
+*html #maps{
+		margin-left:365px;
+		margin-top:-200px;
+		height:436px;}
+*html #schools{margin-left:98px;}
+#green_center{
+		background:url(/images/green/center.jpg) repeat-y;
+		width:358px;
+		position:relative;}
+#green_bottom{
+		background:url(/images/green/bottom.jpg) no-repeat;
+		width:358px;
+		height:19px;
+		position:relative;}
+#main_bottom{
+		background:url(/images/main_bottom.jpg) no-repeat;
+		width:781px;
+		height:11px;
+		float:left;}
+#main_bottom_other{
+		background:url(/images/main_bottom_other.jpg) no-repeat;
+		width:781px;
+		height:11px;
+		float:left;}
+*html #main_bottom_other{
+		margin-top:-7px;}
+#main_bottom_up{
+		background:url(/images/main_bottom_up.jpg) no-repeat;
+		width:782px;
+		height:26px;
+		float:left;}
+#blocknot{
+		background:url(/images/blocknot.jpg) no-repeat;
+		width:340px;
+		height:76px;
+		float:left;}
+#main_bottom_center{
+		background:url(/images/main_bottom_center.jpg) repeat-y;
+		width:782px;
+		float:left;}
+#main_bottom_down{
+		background:url(/images/main_bottom_down.jpg) no-repeat;
+		width:782px;
+		height:11px;
+		float:left;}
+*html #main_bottom_down{margin-top:-8px;}
+
+#footer{
+		clear:both;
+		background:url(/images/fon.jpg) repeat-x;
+		width:781px;
+		height:96px;
+		position:relative;}		
+*html #footer{margin-top:-3px;}
+#orange{
+		background:url(/images/orange.jpg) no-repeat;
+		width:83px;
+		height:156px;
+		position:absolute;
+		z-index:10;
+		left:0;
+		bottom:0px;
+		float:left;}
+#header_left_rollover{
+		position:absolute;
+		width:212px;
+		top:140px;
+		left:0;}		
+#contact{
+		width:193px;
+		margin-top:250px;}
+*html #contact{margin-top:0px;}
+*+html #contact{margin-top:0px;}
+#contact_up{
+		background:url(/images/contact_up.gif) no-repeat;
+		width:193px;
+		height:148px;
+		margin-left:-1px;}
+#contact_center{
+		background:url(/images/contact_center.gif);
+		width:193px;}
+#contact_text{
+		width:160px;
+		margin-left:25px;}
+#contact_down{
+		background:url(/images/contact_down.gif) no-repeat;
+		width:193px;
+		height:18px;}
+
+#green_school_up{
+background:url(/images/green_school_up.jpg) no-repeat;
+width:548px;
+height:30px;
+}
+#green_school_center{
+background:url(/images/green_school_center.jpg) repeat-y;
+width:548px;
+margin-top:-10px;
+position:relative;
+float:left;
+}
+#green_school_down{
+background:url(/images/green_school_down.jpg) no-repeat;
+width:548px;
+height:17px;
+position:relative;
+float:left;
+}
+#green_school_left{
+width:300px;
+float:left;
+position:relative;}
+#green_school_right{
+width:200px;
+float:left;
+position:relative;
+margin-left:37px;}
+*html #green_school_right{
+margin-left:27px;}
+#green_school_blocknot{
+background:url(/images/green_blocknot.jpg) no-repeat;
+width:225px;
+color:#FFFFFF;
+height:90px;
+float:left;
+padding-left:85px;
+text-align:right;}
+#green_school_text{
+		color:#f4f4f4;
+
+		margin-left:15px;
+}
+*html #green_school_text{
+		margin-top:0}
+#ggreen_school_text UL{
+		list-style-image: url(/images/treug_green.gif);}

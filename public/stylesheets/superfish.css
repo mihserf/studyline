@@ -1,0 +1,117 @@
+.sf-menu {
+	MARGIN-RIGHT: 20px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none !important
+}
+.sf-menu  {
+	PADDING-RIGHT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.sf-menu {
+	LINE-HEIGHT: 1.5
+}
+.sf-menu UL {
+	WIDTH: 150px; POSITION: absolute; TOP: -999em
+}
+.sf-menu UL LI {
+	WIDTH: 100%
+}
+.sf-menu LI:hover {
+	VISIBILITY: inherit
+}
+.sf-menu LI {
+	FLOAT: left; POSITION: relative
+}
+.sf-menu A {
+	DISPLAY: block; POSITION: relative
+}
+.sf-menu LI:hover UL {
+	Z-INDEX: 99; LEFT: 0px; TOP: 2.5em
+}
+.sf-menu LI.sfHover UL {
+	Z-INDEX: 99; LEFT: 0px; TOP: 2.5em
+}
+UL.sf-menu LI:hover LI UL {
+	TOP: -999em
+}
+UL.sf-menu LI.sfHover LI UL {
+	TOP: -999em
+}
+UL.sf-menu LI LI:hover UL {
+	LEFT: 0em; TOP: 0px
+}
+UL.sf-menu LI LI.sfHover UL {
+	LEFT: 0em; TOP: 0px
+}
+UL.sf-menu LI LI:hover LI UL {
+	TOP: -999em
+}
+UL.sf-menu LI LI.sfHover LI UL {
+	TOP: -999em
+}
+UL.sf-menu LI LI LI:hover UL {
+	LEFT: 0em; TOP: 0px
+}
+UL.sf-menu LI LI LI.sfHover UL {
+	LEFT: 0em; TOP: 0px
+}
+.sf-menu {
+	FLOAT: left; MARGIN-BOTTOM: 1em
+}
+.sf-menu A {
+	  PADDING-LEFT: 1em; PADDING-BOTTOM: 0.75em;  PADDING-TOP: 2px; TEXT-DECORATION: none
+}
+.sf-menu A {
+	COLOR: #ffffff
+}
+.sf-menu A:visited {
+	COLOR: #ffffff
+}
+.sf-menu LI {
+	BACKGROUND: #00b7e6
+}
+.sf-menu LI LI {
+	BACKGROUND: #00b7e6
+}
+.sf-menu LI LI LI {
+	BACKGROUND: #00b7e6
+}
+.sf-menu LI:hover {
+	BACKGROUND: #018bbc; outline: 0
+}
+.sf-menu LI.sfHover {
+	BACKGROUND: #018bbc; outline: 0
+}
+.sf-menu A:unknown {
+	BACKGROUND: #ffffff; outline: 0
+}
+.sf-menu A:hover {
+	BACKGROUND:#018bbc; outline: 0
+}
+.sf-menu A:active {
+	BACKGROUND: #018bbc; outline: 0
+}
+.sf-menu A.sf-with-ul {
+	PADDING-RIGHT: 2.25em; min-width: 1px
+}
+.sf-sub-indicator {
+	DISPLAY: block; RIGHT: 0.75em; BACKGROUND: url(/images/arrows-ffffff.png) no-repeat -10px -100px; OVERFLOW: hidden; WIDTH: 10px; TEXT-INDENT: -999em; POSITION: absolute; TOP: 1.05em; HEIGHT: 10px
+}
+UNKNOWN {
+	BACKGROUND-POSITION: 0px -100px; TOP: 0.8em
+}
+UNKNOWN {
+	BACKGROUND-POSITION: -10px -100px
+}
+.sf-menu UL .sf-sub-indicator {
+	BACKGROUND-POSITION: 0px 0px
+}
+UNKNOWN {
+	BACKGROUND-POSITION: 0px 0px
+}
+UNKNOWN {
+	BACKGROUND-POSITION: -10px 0px
+}
+.sf-shadow UL {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 0px; BACKGROUND: url(/images/shadow.png) no-repeat right bottom; PADDING-BOTTOM: 9px; PADDING-TOP: 0px; moz-border-radius-bottomleft: 17px; moz-border-radius-topright: 17px; webkit-border-top-right-radius: 17px; webkit-border-bottom-left-radius: 17px
+}
+.sf-shadow UL.sf-shadow-off {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}

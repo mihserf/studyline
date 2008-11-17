@@ -1,0 +1,22 @@
+<%= javascript_include_tag :fckeditor %>
+
+<%= error_messages_for :country %>
+<%form_for [:admin,@country] do |f|%>
+Язык <b><%=lang_id(@lang)%></b>
+<p>
+<%= f.label 'Название' %><br />
+<%=f.text_field :name%>
+</p>
+<p>
+    <%=ident_choice(@country)%>
+ </p>
+<p>
+<%= f.label 'Описание' %><br />
+<%= fckeditor_textarea(:country, :description, :toolbarSet => 'Simple', :width => '98%', :height => '300px') %>
+</p>
+
+<p>
+<%=f.submit 'Сохранить изменения' %>
+</p>
+<%end%>
+

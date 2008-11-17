@@ -1,0 +1,7 @@
+<%@locales=Localedb.find(:all)%>
+
+<ul>
+<%= program_set(Program) {|i| render :partial=>"admin/programs/program_item.html.erb", :locals =>{:it=>i} } %>
+</ul>
+
+<%= link_to 'Добавить программу', new_admin_l_program_path(lang_id(@lang)) %>

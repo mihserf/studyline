@@ -1,0 +1,5 @@
+
+
+<li style="list-style:none; padding-left:<%= it.level*20 %>px;"><%= link_to it.name, l_program_path(lang_id(@lang),it.permalink) %>
+<%= sub_programs_menu(it){|i| render :partial=>"programs/program_menu_sub_item.html.erb", :locals =>{:it=>i} } unless it.leaf? %>
+</li>

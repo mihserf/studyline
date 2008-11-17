@@ -1,0 +1,46 @@
+<%= javascript_include_tag :fckeditor %>
+<%= javascript_include_tag 'ui.core.js' %>
+<%= javascript_include_tag 'jquery.sortable.min.js' %>
+<%= javascript_include_tag 'own.sortable.js' %>
+
+<%= error_messages_for :program %>
+<%form_for [:admin,@program] do |f|%>
+Язык <b><%=lang_id(@lang)%></b>
+<p>
+<%= f.label 'Заголовок' %><br />
+<%=f.text_field :name%>
+</p>
+<p>
+    <%=ident_choice(@program)%>
+</p>
+<p>
+  <%= f.label 'Относится к стране:' %><br />
+  <%= f.select :country_id, Country.find(:all).map{|it| [it.name,it.id]}, {:include_blank => true} %>
+</p>
+<p>
+  <%= f.label 'Промо-текст курсов (отображается перед списком курсов)' %><br />
+  <%= fckeditor_textarea(:program, :courses_promo, :toolbarSet => 'Simple', :width => '98%', :height => '250px') %>
+</p>
+<p>
+<%= f.label 'Описание' %><br />
+<%= fckeditor_textarea(:program, :description, :toolbarSet => 'Simple', :width => '98%', :height => '300px') %>
+</p>
+<p>
+    <%= f.label 'относится к программе:' %><br />
+    <%= f.select :parent_id, nested_set_options(Program) {|i| "#{'--' * i.level} #{i.name}" }, {:include_blank => "не относится"} %>
+</p>
+
+<% unless @program.new_record? %>
+<p>Порядок в списке (перетаскивайте мышкой программу):</p>
+<ul id="sortable">
+    <% @program.self_and_siblings.each do |it| %>
+      <li id="<%=it.id %>"><%=it.name%></li>
+    <% end %>
+</ul>
+<%= hidden_field_tag 'sortable_ids' %>
+<% end %>
+<p>
+<%=f.submit 'Сохранить изменения' %>
+</p>
+<%end%>
+
