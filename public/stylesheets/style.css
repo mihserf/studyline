@@ -240,7 +240,7 @@ margin-top:8px;}
 		left:0;}		
 #contact{
 		width:193px;
-		margin-top:10px;}
+		overflow:hidden;}
 *html #contact{margin-top:0px;}
 *+html #contact{margin-top:0px;}
 #contact_up{
