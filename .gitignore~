@@ -2,7 +2,6 @@ log/*.log
 db/*.sqlite3
 db/schema.rb
 public/uploads
-public/photos
 tmp/**/*
 doc/api
 doc/app
