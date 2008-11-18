@@ -1,0 +1,38 @@
+
+<div id="courses">
+  <div id="courses_up"></div>
+  <div id="courses_center">
+  <span>
+
+  <img src="/images/green_blocknot.jpg"/>
+  <%= program.courses_promo %>
+
+  <% unless program.leaf? %>
+      <% programs = program.descendants %>
+      <%  programs.each do  |prog| %>
+            <% courses=prog.courses %>
+            <% unless courses.empty? %>
+                <h4><%= link_to  prog.name, l_program_path(lang_id(@lang), prog.permalink) %></h4>
+                <ul>
+                  <% courses.each do |course| %>
+                    <li><%= link_to course.name, l_course_path(lang_id(@lang),course.permalink) %></li>
+                  <% end %>
+                </ul>
+            <% end %>
+      <% end %>
+   <% else %>
+        <% courses=program.courses %>
+            <% unless courses.empty? %>
+                <ul>
+                  <% courses.each do |course| %>
+                    <li><%= link_to course.name, l_course_path(lang_id(@lang),course.permalink) %></li>
+                  <% end %>
+                </ul>
+            <% end %>
+   <% end %>
+
+  </span>
+  </div>
+  <div id="courses_down"></div>
+</div>
+

@@ -259,50 +259,84 @@ margin-top:8px;}
 		width:193px;
 		height:18px;}
 
-#green_school_up{
-background:url(/images/green_school_up.jpg) no-repeat;
-width:548px;
+
+
+
+#top_cont{
+overflow:hidden;
+}
+
+#courses{
+	float:left;
+	width:326px;
+        color:#fff;
+}
+
+#courses h4{
+  padding:0px;
+}
+#courses a{
+  color:#fff;
+}
+
+#courses ul{
+  list-style:disc;
+  padding:0px;
+  margin:0px;
+}
+
+#courses_up{
+background:url(/images/green_school_up1.jpg) no-repeat;
+width:326px;
 height:30px;
 }
-#green_school_center{
-background:url(/images/green_school_center.jpg) repeat-y;
-width:548px;
+#courses_center{
+background:url(/images/green_school_center1.jpg) repeat-y;
+width:326px;
 margin-top:-10px;
 position:relative;
 float:left;
+padding:0px;
+color:#FFFFFF;
 }
-#green_school_down{
-background:url(/images/green_school_down.jpg) no-repeat;
-width:548px;
+#courses_center img{
+float:left;
+margin-left:-15px;
+}
+
+
+#courses_center span{display:block; float:left; width:90%; padding:0px 15px;}
+
+#courses_down{
+background:url(/images/green_school_down1.jpg) no-repeat;
+width:326px;
 height:17px;
 position:relative;
 float:left;
 }
-#green_school_left{
-width:300px;
-float:left;
-position:relative;}
-#green_school_right{
-width:200px;
-float:left;
-position:relative;
-margin-left:37px;}
-*html #green_school_right{
-margin-left:27px;}
-#green_school_blocknot{
-background:url(/images/green_blocknot.jpg) no-repeat;
-width:225px;
-color:#FFFFFF;
-height:90px;
-float:left;
-padding-left:85px;
-text-align:right;}
-#green_school_text{
-		color:#f4f4f4;
 
-		margin-left:15px;
+#top_pic{
+float:right;
+width:218px;
+margin-right:10px;
 }
-*html #green_school_text{
-		margin-top:0}
-#ggreen_school_text UL{
-		list-style-image: url(/images/treug_green.gif);}
+#top_pic_up{
+background:url(/images/map_up1.jpg) no-repeat;
+width:218px;
+height:20px;}
+
+#top_pic_center{
+background:url(/images/map_center.jpg) repeat-y;
+width:218px;
+position:relative;
+height:240px;}
+#top_pic_down{
+background:url(/images/map_down1.jpg) no-repeat;
+width:218px;
+height:17px;}
+
+#top_pic img{
+ padding:0px;
+ margin:0px auto;
+ display:block;
+ }

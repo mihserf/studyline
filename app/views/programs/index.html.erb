@@ -1,2 +1,5 @@
-<h1>Programs#index</h1>
-<p>Find me in app/views/programs/index.html.erb</p>
+<h1>Программы</h1>
+
+<ul>
+<%= program_set(Program) {|i| "<li style='list-style:none; padding-left:#{i.level*20}px;'>#{link_to i.name, l_program_path(lang_id(@lang),i.permalink) }"} %>
+</ul>

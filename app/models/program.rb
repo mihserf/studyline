@@ -5,6 +5,9 @@ class Program < ActiveRecord::Base
   has_many :course_programs
   has_many :courses, :through => :course_programs
 
+  has_many :photos, :as => :photoable
+  
+
   has_many :translations, :class_name => 'ProgramTranslation', :dependent => :destroy
   translate_columns :name,:description
 
