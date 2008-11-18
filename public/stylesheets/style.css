@@ -294,7 +294,6 @@ height:30px;
 background:url(/images/green_school_center1.jpg) repeat-y;
 width:326px;
 margin-top:-10px;
-position:relative;
 float:left;
 padding:0px;
 color:#FFFFFF;
@@ -311,7 +310,6 @@ margin-left:-15px;
 background:url(/images/green_school_down1.jpg) no-repeat;
 width:326px;
 height:17px;
-position:relative;
 float:left;
 }
 
@@ -328,7 +326,6 @@ height:20px;}
 #top_pic_center{
 background:url(/images/map_center.jpg) repeat-y;
 width:218px;
-position:relative;
 height:240px;}
 #top_pic_down{
 background:url(/images/map_down1.jpg) no-repeat;
