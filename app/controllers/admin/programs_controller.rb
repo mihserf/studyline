@@ -9,6 +9,9 @@ class Admin::ProgramsController < ApplicationController
 
   def create
     @program=Program.new(params[:program])
+
+    @program.build_photo(params[:photo])  unless params[:photo].nil?
+
     if  @program.save!
       unless params[:program][:parent_id].empty?
         @program.move_to_child_of Program.find(params[:program][:parent_id])
@@ -46,6 +49,13 @@ class Admin::ProgramsController < ApplicationController
       end
     end
 
+    unless params[:photo].nil?
+      if @photo = @program.photo
+        @photo.update_attributes(params[:photo])
+      else
+        @program.create_photo(params[:photo])
+      end
+    end
 
     if  @program.update_attributes(params[:program])
       flash[:notice]="программа обновлена"

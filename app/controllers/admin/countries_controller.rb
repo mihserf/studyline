@@ -11,6 +11,9 @@ class Admin::CountriesController < ApplicationController
 
   def create
     @country=Country.new(params[:country])
+
+    @country.build_photo(params[:photo])  unless params[:photo].nil?
+    
     if  @country.save!
       flash[:notice]="Страна создана."
       redirect_to admin_l_countries_path(@lang.to_s.split('-').first)
@@ -25,6 +28,15 @@ class Admin::CountriesController < ApplicationController
 
   def update
     @country=Country.find(params[:id])
+    
+    unless params[:photo].nil?
+      if @photo = @country.photo
+        @photo.update_attributes(params[:photo])
+      else
+        @country.create_photo(params[:photo])
+      end
+    end
+
     if  @country.update_attributes(params[:country])
       expire_fragment(:fragment => 'country1')# if params[:id].to_i==1
       flash[:notice]="Страна обновлена"

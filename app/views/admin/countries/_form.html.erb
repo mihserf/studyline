@@ -1,7 +1,7 @@
 <%= javascript_include_tag :fckeditor %>
 
 <%= error_messages_for :country %>
-<%form_for [:admin,@country] do |f|%>
+<%form_for [:admin,@country], :html => { :multipart => true } do |f|%>
 Язык <b><%=lang_id(@lang)%></b>
 <p>
 <%= f.label 'Название' %><br />
@@ -14,6 +14,18 @@
 <%= f.label 'Описание' %><br />
 <%= fckeditor_textarea(:country, :description, :toolbarSet => 'Simple', :width => '98%', :height => '300px') %>
 </p>
+
+<p>
+    <% fields_for Photo.new() do |member_f| %>
+    <%  photo = @country.photo  %>
+    <% unless  @country.new_record? || photo.nil? %>
+      <p><%= image_tag photo.public_filename(:view) %></p>
+    <%end%>
+    <%= member_f.label 'карта страны:' %><br />
+    <%= member_f.file_field  :uploaded_data %>
+    <%end%>
+</p>
+
 
 <p>
 <%=f.submit 'Сохранить изменения' %>

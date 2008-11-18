@@ -27,5 +27,10 @@ module ApplicationHelper
     render :partial => "shared/menu_left"
   end
 
+  def photo(program)
+    photo = program.photo || (program.country.photo unless program.country.nil?)
+    render :partial => "shared/photo", :locals => {:photo => photo} unless photo.nil?
+  end
+
 
 end
