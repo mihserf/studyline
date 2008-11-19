@@ -86,6 +86,11 @@ margin-top:8px;}
 		width:565px;
 		margin-left:210px;
   }
+#cont span#content{
+    display:block;
+    width:555px;
+}
+
 #cont1{
 		width:565px;
 		margin-left:210px;}
