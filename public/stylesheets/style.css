@@ -84,7 +84,9 @@ margin-top:8px;}
 		text-align:left;}
 #cont{
 		width:565px;
-		margin-left:210px;}
+		margin-left:210px;
+                padding:0px 10px;
+  }
 #cont1{
 		width:565px;
 		margin-left:210px;}
