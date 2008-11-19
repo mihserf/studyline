@@ -1,0 +1,11 @@
+<% if @program %>
+  <div id="top_cont">
+      <%= courses(@program) %>
+      <%= photo(@program) %>
+  </div>
+<% end %>
+
+<h1><%= @course.name %></h1>
+
+
+<%= @course.description %>

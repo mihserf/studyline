@@ -15,7 +15,7 @@
                 <h4><%= link_to  prog.name, l_program_path(lang_id(@lang), prog.permalink) %></h4>
                 <ul>
                   <% courses.each do |course| %>
-                    <li><%= link_to course.name, l_course_path(lang_id(@lang),course.permalink) %></li>
+                    <li><%= link_to course.name, l_program_course_path(lang_id(@lang),prog.permalink,course.permalink) %></li>
                   <% end %>
                 </ul>
             <% end %>
@@ -25,7 +25,7 @@
             <% unless courses.empty? %>
                 <ul>
                   <% courses.each do |course| %>
-                    <li><%= link_to course.name, l_course_path(lang_id(@lang),course.permalink) %></li>
+                    <li><%= link_to course.name, l_program_course_path(lang_id(@lang),program.permalink,course.permalink) %></li>
                   <% end %>
                 </ul>
             <% end %>

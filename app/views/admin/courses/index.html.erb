@@ -2,7 +2,7 @@
 
 <ul>
 <% for course in @courses %>
-  <li style="list-style:none"><a href="<%="/"+Localedb.global.short rescue ""%>/<%=course.permalink%>"><%=course.name%></a>
+  <li style="list-style:none"><%= link_to course.name, l_course_path(lang_id(@lang),course.permalink) %>
   <div class='admin_edit_actions' style="font-size:10pt;  padding-bottom:7px">
     <%@locales.each do |loc|%>
         <%=loc.short%><%= link_to image_tag("/images/edit_ico.gif",:alt=>"Редактировать"), edit_admin_l_course_path(loc.short,course) %>
