@@ -1,2 +1,6 @@
-<h3><%=@page.name%></h3>
-<%=@page.content unless @page.nil?%>
+<% unless @page.nil? %>
+    <h3><%=@page.name%></h3>
+    <%=@page.content %>
+<% else %>
+      <h3>Запрашиваемой страницы не существует.</h3>
+<% end %>

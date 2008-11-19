@@ -50,15 +50,15 @@ $(document).ready(function() {
 <div id="content">
   <div  id="header">
     <div id="header_left">
-      <div><img src="/images/logo.jpg" width="212" height="130"></div>
+      <div><a href="<%= "/"+lang_id(@lang)+"/" %>"><img src="/images/logo.jpg" width="212" height="130"></a></div>
       <%= menu_top %>
     </div>
     <div id="header_right">
       <div id="header_right1"><img src="/images/map.jpg" usemap="#Map" width="253" height="313" border="0">
         <map name="Map">
-          <area shape="poly" coords="40,63,71,33,93,10,120,7,149,30,164,43,93,117,80,127,58,124,21,85" href="#">
+          <area shape="poly" coords="40,63,71,33,93,10,120,7,149,30,164,43,93,117,80,127,58,124,21,85" href="<%= "/"+lang_id(@lang)+"/documents/" %>">
           <area shape="poly" coords="10,226,25,244,64,283,85,285,107,270,135,240,51,160,18,193,10,207" href="#">
-          <area shape="poly" coords="157,205,198,165,244,115,257,104,256,75,214,27,189,26,155,54,77,132" href="#">
+          <area shape="poly" coords="157,205,198,165,244,115,257,104,256,75,214,27,189,26,155,54,77,132" href="<%= "/"+lang_id(@lang)+"/hotoffers/" %>">
         </map>
       </div><div id="header_right2"><img src="/images/study.jpg" width="316" height="313"></div>
     </div>
