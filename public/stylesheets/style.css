@@ -9,6 +9,7 @@ BODY {
 		padding:0;
 		}
 img {border:0}
+
 a{color:#2198d0;}
 #content{
 		margin: 0 auto;
@@ -250,6 +251,9 @@ margin-top:8px;}
 		overflow:hidden;}
 *html #contact{margin-top:0px;}
 *+html #contact{margin-top:0px;}
+
+#contact a{color:#fff}
+
 #contact_up{
 		background:url(/images/contact_up.gif) no-repeat;
 		width:193px;
@@ -346,3 +350,9 @@ height:17px;}
  margin:0px auto;
  display:block;
  }
+
+ .event{
+     width:170px;
+     float:left;
+     padding-bottom:10px;
+   }

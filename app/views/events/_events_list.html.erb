@@ -1,0 +1,12 @@
+
+<% events.each do |it| %>
+
+  <div class="event">
+  <%= image_tag it.event_photo.public_filename(:thumb), :align =>"left", :style => "padding-right:5px;" unless it.event_photo.nil? %>
+  <p><b><%= it.name %></b></p>
+  <%= it.short_description %>
+  <p align="right"><%= link_to 'Подробнее', l_event_path(lang_id(@lang),it.permalink) %></p>
+  </div>
+
+<% end %>
+
