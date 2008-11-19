@@ -7,7 +7,7 @@
   <img src="/images/green_blocknot.jpg"/>
   <%= program.courses_promo %>
 
-<p>
+
   <% unless program.leaf? %>
       <% programs = program.descendants %>
       <%  programs.each do  |prog| %>
@@ -31,7 +31,7 @@
                 </ul>
             <% end %>
    <% end %>
-</p>
+
   </span>
   </div>
   <div id="courses_down"></div>

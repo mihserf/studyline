@@ -313,6 +313,7 @@ margin-left:-15px;
 
 
 #courses_center_span{display:block; float:left; width:90%; padding:0px 15px;}
+#courses_center_span ul{margin-left:20px;}
 
 #courses_down{
 background:url(/images/green_school_down1.jpg) no-repeat;
