@@ -5,9 +5,12 @@ ActionController::Routing::Routes.draw do |map|
   map.admin_logout 'admin/logout', :controller => 'admin', :action => 'logout'
 
   map.resources :pages
-  map.resources :programs
+  map.resources :programs, :shallow => true do |p|
+      p.resources :courses
+    end
   map.resources :countries
   map.resources :courses
+  map.resources :events
   
   
   map.namespace :admin do |admin|
@@ -15,19 +18,24 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :programs
     admin.resources :countries
     admin.resources :courses
+    admin.resources :events
   end
   
   map.with_options :path_prefix => ':lang', :lang => /ru|en|ua/, :name_prefix => 'l_' do |l|
     l.resources :pages
-    l.resources :programs
-    l.resources :countries
+    l.resources :programs do |p|
+      p.resources :courses
+    end
     l.resources :courses
+    l.resources :countries
+    l.resources :events
 
     l.namespace :admin, :path_prefix => ':lang/admin', :name_prefix => 'admin_l_' do |admin|
       admin.resources :pages
       admin.resources :programs
       admin.resources :countries
       admin.resources :courses
+      admin.resources :events
     end
   end
 

@@ -1,0 +1,16 @@
+<%@locales=Localedb.find(:all)%>
+
+<ul>
+<% for event in @events %>
+  <li style="list-style:none"><a href="<%="/"+Localedb.global.short rescue ""%>/<%=event.permalink%>"><%=event.name%></a>
+  <div class='admin_edit_actions' style="font-size:10pt;  padding-bottom:7px">
+    <%@locales.each do |loc|%>
+        <%=loc.short%><%= link_to image_tag("/images/edit_ico.gif",:alt=>"Редактировать"), edit_admin_l_event_path(loc.short,event) %>
+    <%end%>
+     | <%=link_to image_tag("/images/delete_ico.gif",:alt=>"Удалить"), admin_event_path(event), :method => :delete, :confirm => 'подтвердите удаление'%>
+  </div>
+  </li>
+<%end%>
+</ul>
+
+<%= link_to 'Добавить новость', new_admin_l_event_path(lang_id(@lang)) %>

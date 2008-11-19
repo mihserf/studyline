@@ -1,0 +1,43 @@
+<%= javascript_include_tag :fckeditor %>
+
+<%= error_messages_for :event %>
+<%form_for [:admin,@event], :html => { :multipart => true } do |f|%>
+Язык <b><%=lang_id(@lang)%></b>
+<p>
+<%= f.label 'Заголовок' %><br />
+<%=f.text_field :name%>
+</p>
+
+<p>
+    <%=ident_choice(@event)%>
+ </p>
+
+<p>
+<%= f.label 'Дата создания' %><br />
+<%= f.date_select(:created_at) %>
+</p>
+ <p>
+<%= f.label 'Краткий текст новости' %><br />
+<%=f.text_area :name, :size=>"70x6"%>
+</p>
+
+<p>
+<%= f.label 'Текст новости' %><br />
+<%= fckeditor_textarea(:event, :description, :toolbarSet => 'Simple', :width => '98%', :height => '300px') %>
+</p>
+
+<p>
+    <% fields_for EventPhoto.new() do |member_f| %>
+    <%  photo = @event.event_photo  %>
+    <% unless  @event.new_record? || photo.nil? %>
+      <p><%= image_tag photo.public_filename(:view) %></p>
+    <%end%>
+    <%= member_f.label 'фото новости:' %><br />
+    <%= member_f.file_field  :uploaded_data %>
+    <%end%>
+</p>
+
+<p>
+<%=f.submit 'Сохранить изменения' %>
+</p>
+<%end%>
