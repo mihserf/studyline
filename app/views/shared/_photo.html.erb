@@ -1,7 +1,18 @@
+
+<script type="text/javascript" src="/javascripts/jquery.tooltip.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.dimensions.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/jquery.tooltip.css" />
+
+
 <div id="top_pic">
   <div id="top_pic_up"></div>
   <div id="top_pic_center">
-  <%= image_tag photo.public_filename(:view) %>
+    <% zoom_map = photo.photoable_type=="Country" ? "zoom_map":"" %>
+    <% if photo.photoable_type=="Country"%>
+      <%= link_to (image_tag photo.public_filename(:view)), photo.public_filename, :class => "preview", :title=>false %>
+    <% else %>
+      <%= image_tag photo.public_filename(:view) %>
+    <% end %>
   </div>
   <div id="top_pic_down"></div>
 </div>
