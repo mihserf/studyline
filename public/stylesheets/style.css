@@ -364,3 +364,13 @@ height:17px;}
   height:54px;
   position:absolute; bottom:0px; left:160px
 }
+
+
+.admin_edit_link{
+  display:block;
+  width:100px;
+  height: 15px;
+  background:maroon;
+  color:#fff;
+  text-align:center;
+}

@@ -7,3 +7,5 @@
 
 
 <%= @program.description %>
+
+<%= link_to 'редактировать', edit_admin_l_program_path(lang_id(@lang),@program), :class => "admin_edit_link"  if admin? %>

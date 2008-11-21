@@ -9,3 +9,5 @@
 
 
 <%= @course.description %>
+
+<%= link_to 'редактировать', edit_admin_l_course_path(lang_id(@lang),@course), :class => "admin_edit_link"  if admin? %>
