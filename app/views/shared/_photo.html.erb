@@ -6,11 +6,9 @@
 $(document).ready(function(){
   $('.preview').tooltip({
   	track: true,
-  	delay: 0,
-	showURL: false,
-        bodyHandler: function() {
-		return $("<img/>").attr("src", "/photos/0000/0001/england.jpg");
-	}
+  	delay: 100,
+  	showBody: '::',
+  	opacity: 0.85
   });
 });
 </script>
