@@ -46,7 +46,7 @@ this.imagePreview = function(){
 		$("#preview")
 			.css("top",(y_position(e.pageY)) + "px")
 			.css("left",(x_position(e.pageX)) + "px")
-			.fadeIn("fast");
+			.show();
 								
     },
 	function(){

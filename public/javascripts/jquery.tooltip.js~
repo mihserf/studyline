@@ -32,8 +32,8 @@ this.imagePreview = function(){
 		wh=$(window).height()
 		th=$("#preview").height();
 		offset_y=wh-pageY;
-		if (offset_y < th) y=wh-th-40;
-		if ((wh-pageY)>0) y=pageY-40;
+		if (offset_y < th) y=wh-th;
+		if ((wh-pageY)>0) y=pageY;
 		return y;
     	}
 		
@@ -46,12 +46,12 @@ this.imagePreview = function(){
 		$("#preview")
 			.css("top",(y_position(e.pageY)) + "px")
 			.css("left",(x_position(e.pageX)) + "px")
-			.fadeIn("fast");
+			.show();
 								
     },
 	function(){
 		this.title = this.t;	
-		$("#preview").remove();
+		//$("#preview").remove();
     });	
 	$("a.preview").mousemove(function(e){
 		$("#preview")
