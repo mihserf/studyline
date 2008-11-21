@@ -1,4 +1,5 @@
 class Admin::ProgramsController < ApplicationController
+  before_filter :admin_required
   def index
     @programs = Program.all
   end

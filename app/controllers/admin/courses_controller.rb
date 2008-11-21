@@ -1,5 +1,5 @@
 class Admin::CoursesController < ApplicationController
-
+before_filter :admin_required
   def index
     @courses = Course.all
   end

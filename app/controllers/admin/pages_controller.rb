@@ -1,5 +1,5 @@
 class Admin::PagesController < ApplicationController
-  before_filter :admin_required, :only => [:index,:new,:create,:edit,:update]
+  before_filter :admin_required
 
  
 
