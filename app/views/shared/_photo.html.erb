@@ -6,9 +6,11 @@
 $(document).ready(function(){
   $('.preview').tooltip({
   	track: true,
-  	delay: 100,
-  	showBody: '::',
-  	opacity: 0.85
+  	delay: 0,
+	showURL: false,
+        bodyHandler: function() {
+		return $("<img/>").attr("src", "/photos/0000/0001/england.jpg");
+	}
   });
 });
 </script>
@@ -18,7 +20,7 @@ $(document).ready(function(){
   <div id="top_pic_center">
     <% zoom_map = photo.photoable_type=="Country" ? "zoom_map":"" %>
     <% if photo.photoable_type=="Country"%>
-      <%= link_to (image_tag photo.public_filename(:view)), photo.public_filename, :class => "preview2", :title=>"false" %>
+      <%= link_to (image_tag photo.public_filename(:view)), photo.public_filename, :class => "preview", :title=>"false" %>
     <% else %>
       <%= image_tag photo.public_filename(:view) %>
     <% end %>
