@@ -49,7 +49,7 @@ this.imagePreview = function(){
 			.show(); */
 		$("#preview")
 			.css("top",(e.pageY) + "px")
-			.css("left",(e.pageX-200px) + "px")
+			.css("left",(e.pageX-200) + "px")
 			.show();
 								
     },
@@ -63,7 +63,7 @@ this.imagePreview = function(){
 			.css("left",(x_position(e.pageX)) + "px");*/
 		$("#preview")
 			.css("top",(e.pageY) + "px")
-			.css("left",(e.pageX-200px) + "px");
+			.css("left",(e.pageX-200) + "px");
 	});			
 };
 
