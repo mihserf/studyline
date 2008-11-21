@@ -22,7 +22,7 @@ $(document).ready(function(){
     <% zoom_map = photo.photoable_type=="Country" ? "zoom_map":"" %>
     <% if photo.photoable_type=="Country"%>
       <%= link_to (image_tag photo.public_filename(:view)), photo.public_filename, :class => "preview", :title=>"false" %>
-      <img src="/images/zoom.png" class="zoom"/>
+      <%= link_to (image_tag "/images/zoom.png"), photo.public_filename, :class => "zoom", :target=>"_blank" %>
     <% else %>
       <%= image_tag photo.public_filename(:view) %>
     <% end %>
