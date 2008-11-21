@@ -43,20 +43,27 @@ this.imagePreview = function(){
 		var c = (this.t != "") ? "<br/>" + this.t : "";
 		$("body").append("<p id='preview'><img src='"+ this.href +"' alt='Image preview' />"+ c +"</p>");
 										 
-		$("#preview")
+		/*$("#preview")
 			.css("top",(y_position(e.pageY)) + "px")
 			.css("left",(x_position(e.pageX)) + "px")
+			.show(); */
+		$("#preview")
+			.css("top",(e.pageY) + "px")
+			.css("left",(e.pageX-200px) + "px")
 			.show();
 								
     },
 	function(){
 		this.title = this.t;	
-		//$("#preview").remove();
+		$("#preview").remove();
     });	
 	$("a.preview").mousemove(function(e){
-		$("#preview")
+		/*$("#preview")
 			.css("top",(y_position(e.pageY)) + "px")
-			.css("left",(x_position(e.pageX)) + "px");
+			.css("left",(x_position(e.pageX)) + "px");*/
+		$("#preview")
+			.css("top",(e.pageY) + "px")
+			.css("left",(e.pageX-200px) + "px");
 	});			
 };
 
