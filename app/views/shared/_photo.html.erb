@@ -1,8 +1,17 @@
-
-<script type="text/javascript" src="/javascripts/jquery.tooltip.js"></script>
-<script type="text/javascript" src="/javascripts/jquery.dimensions.js"></script>
 <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/jquery.tooltip.css" />
+<script type="text/javascript" src="/javascripts/jquery.dimensions.js"></script>
+<script type="text/javascript" src="/javascripts/jquery.tooltip.js"></script>
 
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.preview').tooltip({
+  	track: true,
+  	delay: 100,
+  	showBody: '::',
+  	opacity: 0.85
+  });
+});
+</script>
 
 <div id="top_pic">
   <div id="top_pic_up"></div>
