@@ -62,4 +62,8 @@ class PagesController < ApplicationController
     @page=Page.find_by_permalink("home")
   end
 
+  def contacts
+    @page=Page.find_by_permalink("contacts")
+  end
+
 end
