@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.admin_logout 'admin/logout', :controller => 'admin', :action => 'logout'
 
   map.resources :pages
+  map.resources :send_message, :only => :create
   map.resources :programs, :shallow => true do |p|
       p.resources :courses
     end
