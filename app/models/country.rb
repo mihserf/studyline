@@ -1,7 +1,7 @@
 class Country < ActiveRecord::Base
   has_many :programs
   has_many :courses
-
+  
   has_one :photo, :as => :photoable
 
   has_many :translations, :class_name => 'CountryTranslation', :dependent => :destroy

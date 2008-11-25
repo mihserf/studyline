@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :pages
   map.resources :send_message, :only => :create
+  map.resources :opinions
   map.resources :programs, :shallow => true do |p|
       p.resources :courses
     end
@@ -20,6 +21,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :countries
     admin.resources :courses
     admin.resources :events
+    admin.resources :opinions
   end
   
   map.with_options :path_prefix => ':lang', :lang => /ru|en|ua/, :name_prefix => 'l_' do |l|
@@ -30,6 +32,7 @@ ActionController::Routing::Routes.draw do |map|
     l.resources :courses
     l.resources :countries
     l.resources :events
+    l.resources :opinions
 
     l.namespace :admin, :path_prefix => ':lang/admin', :name_prefix => 'admin_l_' do |admin|
       admin.resources :pages
@@ -37,6 +40,7 @@ ActionController::Routing::Routes.draw do |map|
       admin.resources :countries
       admin.resources :courses
       admin.resources :events
+      admin.resources :opinions
     end
   end
 
