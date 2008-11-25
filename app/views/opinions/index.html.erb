@@ -1,0 +1,6 @@
+
+<%= image_tag @opinion.opinion_photo.public_filename(:view), :align =>"left", :style => "padding-right:5px;" unless @opinion.opinion_photo.nil? %>
+<h3 class="opinion_title"><%=@opinion.name%></h3>
+<%=@opinion.description %>
+
+<%= link_to 'редактировать', edit_admin_l_opinion_path(lang_id(@lang),@opinion), :class => "admin_edit_link"  if admin? %>
