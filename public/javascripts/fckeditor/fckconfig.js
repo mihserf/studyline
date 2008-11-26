@@ -72,8 +72,8 @@ FCKConfig.AdditionalNumericEntities = ''  ;		// Single Quote: "'"
 
 FCKConfig.FillEmptyBlocks	= true ;
 
-FCKConfig.FormatSource		= true ;
-FCKConfig.FormatOutput		= true ;
+FCKConfig.FormatSource		= false ; // changed
+FCKConfig.FormatOutput		= false ; // changed
 FCKConfig.FormatIndentator	= '    ' ;
 
 FCKConfig.StartupFocus	= false ;
@@ -86,7 +86,7 @@ FCKConfig.ShowBorders	= true ;
 FCKConfig.SourcePopup	= false ;
 FCKConfig.ToolbarStartExpanded	= true ;
 FCKConfig.ToolbarCanCollapse	= true ;
-FCKConfig.IgnoreEmptyParagraphValue = true ;
+FCKConfig.IgnoreEmptyParagraphValue = false ; // changed
 FCKConfig.PreserveSessionOnFileBrowser = false ;
 FCKConfig.FloatingPanelsZIndex = 10000 ;
 FCKConfig.HtmlEncodeOutput = false ;
