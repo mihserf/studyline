@@ -9,7 +9,7 @@ class OpinionsController < ApplicationController
   end
 
   def index
-    @opinions = Opinion.find(:all)
+    @opinions = Opinion.find(:all, :order => "created_at DESC" )
 
     respond_to  do |format|
       format.html # show index.html.erb

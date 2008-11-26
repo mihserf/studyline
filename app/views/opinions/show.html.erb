@@ -1,6 +1,6 @@
 
-<%= image_tag @event.event_photo.public_filename(:view), :align =>"left", :style => "padding-right:5px;" unless @event.event_photo.nil? %>
-<h3 class="event_title"><%=@event.name%></h3>
-<%=@event.description %>
+<%= image_tag @opinion.opinion_photo.public_filename(:view), :align =>"left", :style => "padding-right:5px;" unless @opinion.opinion_photo.nil? %>
 
-<%= link_to 'редактировать', edit_admin_l_event_path(lang_id(@lang),@event), :class => "admin_edit_link"  if admin? %>
+<%=@opinion.description %>
+
+<%= link_to 'редактировать', edit_admin_l_opinion_path(lang_id(@lang),@opinion), :class => "admin_edit_link"  if admin? %>

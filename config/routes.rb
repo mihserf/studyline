@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :pages
   map.resources :send_message, :only => :create
-  #map.resources :opinions
+  map.resources :opinions
   map.resources :programs, :shallow => true do |p|
       p.resources :courses
     end

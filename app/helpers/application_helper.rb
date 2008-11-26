@@ -32,5 +32,12 @@ module ApplicationHelper
     render :partial => "shared/photo", :locals => {:photo => photo} unless photo.nil?
   end
 
+  def static_page(objs)
+    page=Page.find(:first, :conditions => {:controller_name => objs.first.class.to_s.tableize})
+    unless page.nil?
+      render  :partial => "shared/static_page", :locals => {:page => page}
+    end
+  end
+
 
 end
