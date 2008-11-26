@@ -105,6 +105,15 @@ margin-top:8px;}
 		color:#f68a1a;
 		size:18px;
 }
+
+#cont h2{
+		color:#0066CC;
+		size:15px;
+                display:block;
+                text-align:center;
+                width:98%;
+}
+
 #cont h3{
 		color:#818181;
 		size:14px;
