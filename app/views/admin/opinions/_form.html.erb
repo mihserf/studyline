@@ -4,7 +4,7 @@
 <%form_for [:admin,@opinion], :html => { :multipart => true } do |f|%>
 Язык <b><%=lang_id(@lang)%></b>
 <p>
-<%= f.label 'Заголовок' %><br />
+<%= f.label 'Автор отзыва' %><br />
 <%=f.text_field :name%>
 </p>
 
