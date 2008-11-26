@@ -1,6 +1,6 @@
 @charset "windows-1251";
 BODY {
-		font-family: Tahoma;
+		font-family: Verdana;
 		font-size: 12px;
 		color: #818181;
 		background: #ffffff url(/images/bottom.jpg) no-repeat bottom;
@@ -116,15 +116,15 @@ margin-top:8px;}
 		margin-top:7px;
 		font-family:Arial, Helvetica, sans-serif;}
 #news A{
-		font:Tahoma 12px;
+		font:Verdana 12px;
 		color:#00ade3;
 		text-decoration:none;}
 #news A:hover{
-		font:Tahoma 12px;
+		font:Verdana 12px;
 		color:#00ade3;
 		text-decoration:none;}
 #news A:visited{
-		font:Tahoma 12px;
+		font:Verdana 12px;
 		color:#00ade3;
 		text-decoration:none;}
 #conte{
