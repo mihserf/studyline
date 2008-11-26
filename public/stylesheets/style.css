@@ -87,6 +87,10 @@ margin-top:8px;}
 		width:565px;
 		margin-left:210px;
   }
+
+#cont p{
+  margin-top:5px;
+}
 #cont span#content{
     display:block;
     float:left;
