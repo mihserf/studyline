@@ -389,12 +389,14 @@ height:17px;}
   text-align:center;
 }
 
-.opinion {padding-bottom:10px;}
+.opinion {padding-bottom:20px; overflow:hidden}
 
 .prev_next_links{
     overflow:hidden;
     padding-bottom:10px;
     padding-top:30px;
+    width:100%;
+    height:20px;
 }
 
 .next_obj{
