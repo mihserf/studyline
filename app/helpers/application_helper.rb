@@ -38,6 +38,14 @@ module ApplicationHelper
       render  :partial => "shared/static_page", :locals => {:page => page}
     end
   end
+  
+  def prev_obj(obj, sort="id")
+    obj.class.find(:last, :conditions => ["#{sort}<=:sort AND id!=:id",{:sort => obj.send(sort), :id => obj.id}])
+  end
+  
+  def next_obj(obj, sort="id")
+    obj.class.find(:first, :conditions => ["#{sort}>=:sort AND id!=:id",{:sort => obj.send(sort), :id => obj.id}])
+  end
 
 
 end

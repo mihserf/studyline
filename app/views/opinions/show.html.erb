@@ -1,6 +1,13 @@
-
+<h3><%= @opinion.name%></h3>
 <%= image_tag @opinion.opinion_photo.public_filename(:view), :align =>"left", :style => "padding-right:5px;" unless @opinion.opinion_photo.nil? %>
 
 <%=@opinion.description %>
+
+<p><%= link_to @opinion.course.name, l_course_path(lang_id(@lang),@opinion.permalink) unless @opinion.course.nil?%></p>
+
+<div class="prev_next_links">
+<%= link_to 'Предыдущий отзыв',l_opinion_path(lang_id(@lang),prev_obj(@opinion,"created_at").permalink), :class => 'prev_obj' unless prev_obj(@opinion,"created_at").nil? %>
+<%= link_to 'Следующий отзыв',l_opinion_path(lang_id(@lang),next_obj(@opinion,"created_at").permalink), :class => 'next_obj' unless next_obj(@opinion,"created_at").nil? %>
+</div>
 
 <%= link_to 'редактировать', edit_admin_l_opinion_path(lang_id(@lang),@opinion), :class => "admin_edit_link"  if admin? %>

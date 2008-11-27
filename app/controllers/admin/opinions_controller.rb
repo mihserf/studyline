@@ -3,7 +3,7 @@ class Admin::OpinionsController < ApplicationController
 
 
   def index
-    @opinions=Opinion.find(:all, :order => :permalink)
+    @opinions=Opinion.find(:all, :order => "created_at DESC")
   end
 
   def new

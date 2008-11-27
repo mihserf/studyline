@@ -388,3 +388,20 @@ height:17px;}
   color:#fff;
   text-align:center;
 }
+
+.opinion {padding-bottom:10px;}
+
+.prev_next_links{
+    overflow:hidden;
+    padding-bottom:10px;
+    padding-top:30px;
+}
+
+.next_obj{
+    display:block;
+    float: right;
+}
+.prev_obj{
+    display:block;
+    float: left;
+}
