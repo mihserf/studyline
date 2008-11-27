@@ -3,7 +3,7 @@
 
 <%=@opinion.description %>
 
-<div class="opinion_course">Этот отзыв о школе <%= link_to @opinion.course.name, l_course_path(lang_id(@lang),@opinion.course.permalink) unless @opinion.course.nil?%></div>
+<div class="opinion_course">Этот отзыв о <%= link_to @opinion.course.name, l_course_path(lang_id(@lang),@opinion.course.permalink) unless @opinion.course.nil?%></div>
 
 <div class="prev_next_links">
 <%= link_to 'Предыдущий отзыв',l_opinion_path(lang_id(@lang),prev_obj(@opinion,"created_at").permalink), :class => 'prev_obj' unless prev_obj(@opinion,"created_at").nil? %>
