@@ -2,7 +2,7 @@
 
 <ul>
 <% for opinion in @opinions %>
-  <li style="list-style:none"><a href="<%="/"+Localedb.global.short rescue ""%>/<%=opinion.permalink%>"><%=opinion.name%></a>
+  <li style="list-style:none"><%= link_to opinion.name, l_opinion_path(lang_id(@lang), opinion.permalink)%>
   <div class='admin_edit_actions' style="font-size:10pt;  padding-bottom:7px">
     <%@locales.each do |loc|%>
         <%=loc.short%><%= link_to image_tag("/images/edit_ico.gif",:alt=>"Редактировать"), edit_admin_l_opinion_path(loc.short,opinion) %>
