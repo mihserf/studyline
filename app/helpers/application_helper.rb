@@ -40,11 +40,11 @@ module ApplicationHelper
   end
   
   def prev_obj(obj, sort="id")
-    obj.class.find(:last, :conditions => ["#{sort}<=:sort AND id!=:id",{:sort => obj.send(sort), :id => obj.id}])
+    obj.class.find(:last, :conditions => ["#{sort}<=:sort AND id!=:id",{:sort => obj.send(sort), :id => obj.id}], :order => "#{sort}")
   end
   
   def next_obj(obj, sort="id")
-    obj.class.find(:first, :conditions => ["#{sort}>=:sort AND id!=:id",{:sort => obj.send(sort), :id => obj.id}])
+    obj.class.find(:first, :conditions => ["#{sort}>=:sort AND id!=:id",{:sort => obj.send(sort), :id => obj.id}], :order => "#{sort}")
   end
 
 
