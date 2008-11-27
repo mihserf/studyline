@@ -10,4 +10,12 @@
 
 <%= @course.description %>
 
+<% if @course.has_opinions? %>
+<div class="course_opinions">
+    <% @opinions = @course.opinions%>
+    <h3><%= @opinions.size==1 ? "Отзыв":"Отзывы"%></h3>
+    <%= render :partial=>'/opinions/opinion', :collection => @opinions %>
+</div>
+<% end%>
+
 <%= link_to 'редактировать', edit_admin_l_course_path(lang_id(@lang),@course), :class => "admin_edit_link"  if admin? %>

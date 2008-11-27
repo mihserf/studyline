@@ -11,5 +11,9 @@ class Course < ActiveRecord::Base
   validates_presence_of :name
   
   include SetPermalink
+  
+  def has_opinions?
+    !opinions.empty?
+  end
 
 end

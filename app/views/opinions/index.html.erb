@@ -1,12 +1,5 @@
-<%=static_page(@opinions)%>
+<%= static_page(@opinions) %>
 
-<% for it in @opinions do %>
-<div class="opinion">
-<%= image_tag it.opinion_photo.public_filename(:view), :align =>"left", :style => "padding-right:5px;" unless it.opinion_photo.nil? %>
-<%= it.short_description %>
-<div><%= link_to 'Читать полностью', l_opinion_path(lang_id(@lang),it.permalink) %></div>
-<p style="text-align: right;"><strong><%= it.name %></strong></p>
-</div>
-<% end %>
+<%= render :partial=>'opinion', :collection => @opinions %>
 
 <%= link_to 'редактировать', admin_l_opinions_path(lang_id(@lang)), :class => "admin_edit_link"  if admin? %>

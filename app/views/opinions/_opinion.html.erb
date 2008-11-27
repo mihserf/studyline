@@ -1,0 +1,6 @@
+<div class="opinion">
+<%= image_tag opinion.opinion_photo.public_filename(:view), :align =>"left", :style => "padding-right:5px;" unless opinion.opinion_photo.nil? %>
+<%= opinion.short_description %>
+<div><%= link_to 'Читать полностью', l_opinion_path(lang_id(@lang),opinion.permalink) %></div>
+<p style="text-align: right;"><strong><%= opinion.name %></strong></p>
+</div>
