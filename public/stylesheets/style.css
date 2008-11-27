@@ -391,6 +391,11 @@ height:17px;}
 
 .opinion {padding-bottom:20px; overflow:hidden; height:100%;}
 
+.opinion_course{
+    clear:both;
+    width:98%;
+}
+
 .prev_next_links{
     overflow:hidden;
     padding-bottom:10px;
