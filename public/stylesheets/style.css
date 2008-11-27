@@ -389,7 +389,7 @@ height:17px;}
   text-align:center;
 }
 
-.opinion {padding-bottom:20px; overflow:hidden}
+.opinion {padding-bottom:20px; overflow:hidden; height:100%;}
 
 .prev_next_links{
     overflow:hidden;
