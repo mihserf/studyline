@@ -395,8 +395,9 @@ height:17px;}
     overflow:hidden;
     padding-bottom:10px;
     padding-top:30px;
-    width:90%;
+    width:98%;
     height:20px;
+    clear:both;
 }
 
 .next_obj{
