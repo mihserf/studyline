@@ -261,8 +261,9 @@ margin-top:8px;}
 		top:140px;
 		left:0;}		
 #contact{
-		width:193px;
-		overflow:hidden;}
+width:193px;
+float:left;                
+}
 *html #contact{margin-top:0px;}
 *+html #contact{margin-top:0px;}
 
