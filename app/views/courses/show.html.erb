@@ -1,3 +1,4 @@
+<% @program = @course.programs.first if @program.nil? %>
 <% if @program %>
   <div id="top_cont">
       <%= courses(@program) %>
@@ -9,6 +10,14 @@
 
 
 <%= @course.description %>
+
+<% if @course.has_sub_courses? %>
+  <ul>
+  <% @course.sub_courses.each do |it| %>
+    <li><%= link_to it.name, l_program_course_path(lang_id(@lang), @program.permalink, it.permalink) unless @program.nil?%></li>
+  <% end %>
+  </ul>
+<% end %>
 
 <% if @course.has_opinions? %>
 <div class="course_opinions">

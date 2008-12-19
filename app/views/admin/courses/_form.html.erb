@@ -42,6 +42,11 @@
     </ul>
   </p>
 
+  <p>
+    <%= f.label 'относится к курсу:' %><br>
+    <%= f.select :course_id, Course.find(:all, :select=>"name, id").map{|i| [i.name, i.id]}, {:include_blank => true} %>
+  </p>
+
 <p>
 <%=f.submit 'Сохранить изменения' %>
 </p>
