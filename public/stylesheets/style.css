@@ -314,17 +314,17 @@ overflow:hidden;
 }
 
 #courses_up{
-background:url(/images/green_school_up1.jpg) no-repeat;
+background:url(/images/gray_school_up1.jpg) no-repeat;
 width:326px;
 height:30px;
 }
 #courses_center{
-background:url(/images/green_school_center1.jpg) repeat-y;
+background:url(/images/gray_school_center1.jpg) repeat-y;
 width:326px;
 margin-top:-10px;
 float:left;
 padding:0px;
-color:#FFFFFF;
+color:#191970;
 }
 #courses_center img{
 float:left;
@@ -334,10 +334,11 @@ padding-right:20px;
 
 
 #courses_center_span{display:block; float:left; width:90%; padding:0px 15px;}
-#courses_center_span ul{margin-left:20px;}
+#courses_center_span ul{margin-left:20px; color:#4682B4;}
+    #courses_center_span ul a{color:#191970;}
 
 #courses_down{
-background:url(/images/green_school_down1.jpg) no-repeat;
+background:url(/images/gray_school_down1.jpg) no-repeat;
 width:326px;
 height:17px;
 float:left;
