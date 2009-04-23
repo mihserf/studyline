@@ -16,3 +16,6 @@
 [submodule "vendor/plugins/fckeditor"]
 	path = vendor/plugins/fckeditor
 	url = git://github.com/bilson/fckeditor.git
+[submodule "vendor/plugins/seo_helper"]
+	path = vendor/plugins/seo_helper
+	url = git://github.com/relevance/seo_helper.git
