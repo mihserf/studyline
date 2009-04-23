@@ -47,5 +47,8 @@ module ApplicationHelper
     obj.class.find(:first, :conditions => ["#{sort}>=:sort AND id!=:id",{:sort => obj.send(sort), :id => obj.id}], :order => "#{sort}")
   end
 
+  def meta(obj=nil,title=nil)
+    render :partial => "shared/meta", :locals=> {:obj => obj,:title => title}
+  end
 
 end

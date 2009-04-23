@@ -3,7 +3,8 @@
     <%= photo(@program) %>
 </div>
 
-<h2><%= @program.name %></h2>
+<%= page_title(@program.name,:h2) %>
+<%= meta @program %>
 
 
 <%= @program.description %>

@@ -25,6 +25,6 @@ class Course < ActiveRecord::Base
     course_id!=nil
   end
 
-
+  acts_as_seo
 
 end

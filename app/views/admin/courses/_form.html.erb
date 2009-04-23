@@ -47,6 +47,8 @@
     <%= f.select :course_id, Course.find(:all, :select=>"name, id").map{|i| [i.name, i.id]}, {:include_blank => true} %>
   </p>
 
+<%= render :partial => "shared/seo_fields", :locals => {:f => f} %>
+
 <p>
 <%=f.submit 'Сохранить изменения' %>
 </p>

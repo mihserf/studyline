@@ -19,6 +19,8 @@ class Program < ActiveRecord::Base
 
   include SetPermalink
 
+  acts_as_seo
+
   #named_scope :roots, :conditions => {:parent_id=>nil}
 
   

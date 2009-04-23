@@ -19,3 +19,6 @@
 [submodule "vendor/plugins/seo_helper"]
 	path = vendor/plugins/seo_helper
 	url = git://github.com/relevance/seo_helper.git
+[submodule "vendor/plugins/acts_as_seo"]
+	path = vendor/plugins/acts_as_seo
+	url = git://github.com/azisaka/acts_as_seo.git

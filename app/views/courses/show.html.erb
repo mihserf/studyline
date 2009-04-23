@@ -6,7 +6,8 @@
   </div>
 <% end %>
 
-<h2><%= @course.name %></h2>
+<%= page_title(@course.name,:h2) %>
+<%= meta @course %>
 
 
 <%= @course.description %>
