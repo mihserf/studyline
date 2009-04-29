@@ -38,6 +38,7 @@ doc\:clobber_plugins=Remove plugin documentation
 doc\:clobber_rails=Remove rdoc products
 doc\:guides=Generate Rails guides
 doc\:plugins=Generate documentation for all installed plugins
+doc\:plugins\:acts_as_seo=Generate documentation for the acts_as_seo plugin
 doc\:plugins\:attachment_fu=Generate documentation for the attachment_fu plugin
 doc\:plugins\:awesome_nested_set=Generate documentation for the awesome_nested_set plugin
 doc\:plugins\:fckeditor=Generate documentation for the fckeditor plugin
